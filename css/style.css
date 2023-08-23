@@ -1,0 +1,717 @@
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway-light'),
+    url('../fonts/Raleway-light.woff') format('woff'),
+    url('../fonts/Raleway-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway-Regular'),
+    url('../fonts/Raleway-Regular.woff') format('woff'),
+    url('../fonts/Raleway-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway-Medium'),
+    url('../fonts/Raleway-Medium.woff') format('woff'),
+    url('../fonts/Raleway-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Prata';
+  src: local('Prata-Regular'),
+    url('../fonts/Prata-Regular.woff') format('woff'),
+    url('../fonts/Prata-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --hard-grey: #181515;
+  --brown: #AD2D11;
+  --yellow: #FACA47;
+  --coffee: #FDFAF4;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus-visible,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', 'Prata', sans-serif;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 95px;
+  width: 100%;
+}
+
+/* header */
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--black);
+  opacity: 0.15;
+  width: 70%;
+  left: 15%;
+  bottom: 0;
+}
+
+.header__nav__list {
+  display: flex;
+  justify-content: center;
+}
+
+.header__nav__item:not(:last-child) {
+  margin-right: 68px;
+}
+
+.header__nav__link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--black);
+  transition: all 0.3s ease-in-out;
+
+}
+
+/* hero */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  height: 732px;
+  margin-top: -76px;
+  padding-top: 300px;
+  background-image: url(../img/header__photo.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__heading__1 {
+  margin-bottom: 5px;
+  font-family: 'Prata';
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 65px;
+  color: var(--brown);
+}
+
+.hero__slogan {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--black);
+}
+
+/* about-city */
+
+.about-city {
+  padding: 200px 0 0 0;
+  background-color: var(--coffee);
+}
+
+.heading-2 {
+  font-family: Prata;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
+  color: var(--brown);
+}
+
+.heading-2_about-city {
+  margin-bottom: 57px;
+}
+
+.about-city__slider {
+  max-width: 1440px;
+}
+
+.about-city__slider__wrapper {
+  margin-bottom: 124px;
+}
+
+.swiper-slide {
+  display: flex;
+}
+
+.swiper__photo {
+  margin-right: 124px;
+}
+
+.swiper__text {
+  max-width: 376px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--black);
+}
+
+.about-city__wrapper {
+  padding: 191px 0 224px 0;
+  background-color: var(--white);
+}
+
+.about-city__wrapper__container {
+  position: relative;
+}
+
+.about-city__wrapper__container::after {
+  content: "";
+  position: absolute;
+  top: 21%;
+  left: 13%;
+  width: 240px;
+  height: 315px;
+  background-image: url(../img/vintage_vase.png);
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.about-city__wrapper__container::before {
+  content: "";
+  position: absolute;
+  top: -86%;
+  right: 12%;
+  width: 190px;
+  height: 270px;
+  background-image: url(../img/petr_on_horse.png);
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.about-city__wrapper__text {
+  max-width: 1114px;
+  font-family: Prata;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 54px;
+  color: var(--black);
+}
+
+.swiper-button-prev:after {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='37.75' fill='%23FDFAF4' stroke='%23AD2D11' stroke-width='0.5'/%3E%3Cpath d='M16.4154 38.0001H59.9241M35.1676 18.9082C35.1676 18.9082 33.7315 25.9574 28.4282 31.2607C23.1249 36.564 16.0757 38.0001 16.0757 38.0001C16.0757 38.0001 22.7605 39.7351 28.3764 44.6439C33.9923 49.5528 36.0437 56.2158 36.0437 56.2158' stroke='%23AD2D11'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-button-next:after {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='37.75' fill='%23FDFAF4' stroke='%23AD2D11' stroke-width='0.5'/%3E%3Cpath d='M59.5844 38.0001H16.0757M40.8322 57.092C40.8322 57.092 42.2682 50.0428 47.5715 44.7395C52.8748 39.4362 59.9241 38.0002 59.9241 38.0002C59.9241 38.0002 53.2393 36.2651 47.6234 31.3563C42.0074 26.4475 39.956 19.7844 39.956 19.7844' stroke='%23AD2D11'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  left: 895px;
+  top: 68%;
+}
+
+.swiper-button-next {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  left: 995px;
+  top: 68%;
+}
+
+/* history */
+
+.history {
+  padding: 124px 0 176px 0;
+  background-color: var(--coffee);
+}
+
+.heading-2_history {
+  margin-bottom: 55px;
+}
+
+.list {
+  max-width: 976px;
+  margin: 0 auto;
+  counter-reset: counter;
+}
+
+.list__card {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.list__card:not(:nth-child(2n)) {
+  justify-content: flex-end;
+}
+
+.list__card:nth-child(2n) .list__card__content {
+  flex-direction: row-reverse;
+}
+
+.list__card__content {
+  display: flex;
+  width: 50%;
+  position: relative;
+}
+
+.list__card__right {
+  padding: 13px;
+  border: 1px solid var(--yellow);
+  border-radius: 100%;
+  max-width: 150px;
+  width: 100%;
+  box-sizing: initial;
+  transition: all 0.3s ease-in-out;
+}
+
+.list__card__image {
+  height: 150px;
+  background-color: #E5E5E5;
+  border-radius: 100%;
+}
+
+.list__card__left {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.list__card__h3,
+.list__card__text {
+  height: 50%;
+  width: 310px;
+  margin: 0;
+  padding: 12px 15px;
+}
+
+.list__card__text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  color: var(--black);
+}
+
+.list__card__h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  font-family: Prata;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.list__card__h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--yellow);
+  bottom: -0.5px;
+}
+
+.list__card__content::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  bottom: -12px;
+  width: 1px;
+  background-color: var(--yellow);
+  left: -0.5px;
+}
+
+.list__card:nth-child(2n) .list__card__content::before {
+  left: auto;
+  right: -0.5px;
+}
+
+.list__card:first-child .list__card__content::before {
+  top: 50%;
+}
+
+.list__card:last-child .list__card__content::before {
+  bottom: 50%;
+}
+
+/* counter */
+.list__card__content::after {
+  content: counter(counter);
+  counter-increment: counter;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: var(--yellow);
+  color: var(--white);
+  border-radius: 100%;
+}
+
+.list__card:nth-child(2n) .list__card__content::after {
+  left: auto;
+  right: 0;
+  transform: translate(50%, -50%)
+}
+
+/* attractions */
+
+.attractions {
+  padding: 124px 0 76px 0;
+}
+
+.heading-2_attractions {
+  margin-bottom: 157px;
+}
+
+.attractions__text {
+  max-width: 676px;
+  margin-bottom: 180px;
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--black);
+}
+
+.attractions__item {
+  display: flex;
+  padding: 75px 0 100px 0;
+  border-top: 1px solid var(--yellow);
+}
+
+.attractions__heading-3 {
+  margin-right: auto;
+  font-family: Prata;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--black);
+}
+
+.attractions__list__wrapper {
+  display: flex;
+}
+
+.attractions__img {
+  margin-right: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.attractions__text__item {
+  max-width: 476px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--black);
+}
+
+/* travel__budget */
+
+.budget {
+  padding: 124px 0 100px 0;
+  background-color: var(--coffee);
+}
+
+.heading-2_budget {
+  margin-bottom: 57px;
+}
+
+.budget__text {
+  max-width: 676px;
+  margin-left: auto;
+  margin-bottom: 242px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--black);
+}
+
+.budget__list {
+  display: flex;
+  gap: 24px;
+}
+
+.budget__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 276px;
+  min-height: 200px;
+  padding-top: 90px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: all 0.3s ease-in-out;
+}
+
+.budget__item_one {
+  background-image: url(../img/accomodation.svg);
+}
+
+.budget__item_two {
+  background-image: url(../img/vilka_knife.svg);
+}
+
+.budget__item_three {
+  background-image: url(../img/museum.svg);
+}
+
+.budget__item_four {
+  background-image: url(../img/souvenirs.svg);
+}
+
+.budget__text__item {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  color: var(--black);
+}
+
+.budget__price {
+  font-family: Prata;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--black);
+}
+
+/* Petersburg_map */
+
+.map {
+  padding-top: 124px;
+  background-color: var(--coffee);
+}
+
+.heading-2_map {
+  margin-bottom: 55px;
+}
+
+#myMap {
+  width: 100%;
+  height: 488px;
+}
+
+[class*="ground-pane"] {
+  filter: hue-rotate(215deg);
+}
+
+/* footer */
+
+.footer {
+  padding: 38px 0 24px 0;
+  background-color: var(--hard-grey);
+}
+
+.footer__container {
+  display: flex;
+}
+
+.footer__wrapper {
+  flex: 0 1 52%;
+  align-self: flex-end;
+}
+
+.trademark,
+.politic {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--coffee);
+}
+
+.trademark {
+  margin-right: 57px;
+}
+
+.footer__nav {
+  flex: 0 1 50%;
+}
+
+.footer__nav__list {
+  column-count: 2;
+  margin-bottom: 38px;
+}
+
+.footer__nav__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.footer__nav__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: var(--coffee);
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media (hover:hover) {
+
+  .header__nav__link:hover,
+  .footer__nav__link:hover {
+    color: var(--yellow);
+
+  }
+
+  .swiper-button-next:hover:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='37.75' fill='%23FDFAF4' stroke='%23FACA47' stroke-width='0.5'/%3E%3Cpath d='M59.5844 38.0001H16.0757M40.8322 57.092C40.8322 57.092 42.2682 50.0428 47.5715 44.7395C52.8748 39.4362 59.9241 38.0002 59.9241 38.0002C59.9241 38.0002 53.2393 36.2651 47.6234 31.3563C42.0074 26.4475 39.956 19.7844 39.956 19.7844' stroke='%23FACA47'/%3E%3C/svg%3E%0A");
+  }
+
+  .swiper-button-prev:hover:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='37.75' fill='%23FDFAF4' stroke='%23FACA47' stroke-width='0.5'/%3E%3Cpath d='M16.4154 38.0001H59.9241M35.1676 18.9082C35.1676 18.9082 33.7315 25.9574 28.4282 31.2607C23.1249 36.564 16.0757 38.0001 16.0757 38.0001C16.0757 38.0001 22.7605 39.7351 28.3764 44.6439C33.9923 49.5528 36.0437 56.2158 36.0437 56.2158' stroke='%23FACA47'/%3E%3C/svg%3E%0A");
+  }
+}
+
+.header__nav__link:focus-visible,
+.footer__nav__link:focus-visible {
+  border-bottom: 2px solid var(--yellow);
+}
+
+.swiper-button-next:focus-visible:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='37.75' fill='%23FDFAF4' stroke='%23FACA47' stroke-width='0.5'/%3E%3Cpath d='M59.5844 38.0001H16.0757M40.8322 57.092C40.8322 57.092 42.2682 50.0428 47.5715 44.7395C52.8748 39.4362 59.9241 38.0002 59.9241 38.0002C59.9241 38.0002 53.2393 36.2651 47.6234 31.3563C42.0074 26.4475 39.956 19.7844 39.956 19.7844' stroke='%23AD2D11'/%3E%3C/svg%3E%0A");
+}
+
+.swiper-button-prev:focus-visible:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='37.75' fill='%23FDFAF4' stroke='%23FACA47' stroke-width='0.5'/%3E%3Cpath d='M16.4154 38.0001H59.9241M35.1676 18.9082C35.1676 18.9082 33.7315 25.9574 28.4282 31.2607C23.1249 36.564 16.0757 38.0001 16.0757 38.0001C16.0757 38.0001 22.7605 39.7351 28.3764 44.6439C33.9923 49.5528 36.0437 56.2158 36.0437 56.2158' stroke='%23AD2D11'/%3E%3C/svg%3E%0A");
+}
+
+.list__card__image:focus-visible,
+.attractions__img:focus-visible,
+.budget__item:focus-visible {
+  outline: 2px solid var(--yellow);
+}
+
+.header__nav__link:active,
+.footer__nav__link:active {
+  color: var(--brown);
+}
+
+.swiper-button-next:active:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='37.75' fill='%23FDFAF4' stroke='black' stroke-width='0.5'/%3E%3Cpath d='M59.5844 38.0001H16.0757M40.8322 57.092C40.8322 57.092 42.2682 50.0428 47.5715 44.7395C52.8748 39.4362 59.9241 38.0002 59.9241 38.0002C59.9241 38.0002 53.2393 36.2651 47.6234 31.3563C42.0074 26.4475 39.956 19.7844 39.956 19.7844' stroke='black'/%3E%3C/svg%3E%0A");
+}
+
+.swiper-button-prev:active:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='37.75' fill='%23FDFAF4' stroke='%23000000' stroke-width='0.5'/%3E%3Cpath d='M16.4154 38.0001H59.9241M35.1676 18.9082C35.1676 18.9082 33.7315 25.9574 28.4282 31.2607C23.1249 36.564 16.0757 38.0001 16.0757 38.0001C16.0757 38.0001 22.7605 39.7351 28.3764 44.6439C33.9923 49.5528 36.0437 56.2158 36.0437 56.2158' stroke='%23000000'/%3E%3C/svg%3E%0A");
+}
